@@ -1,0 +1,59 @@
+model_list:
+  - model_name: gpt-5-mini
+    litellm_params:
+      model: azure/gpt-5-mini
+      api_key: os.environ/AZURE_API_KEY
+      api_base: os.environ/AZURE_API_BASE
+      api_version: 2025-04-01-preview
+    model_info:
+      input_cost_per_token: 0.00000025
+      output_cost_per_token: 0.000002
+      cache_creation_input_token_cost: 0.00000025
+      cache_read_input_token_cost: 0.00000003
+  - model_name: gpt-5.4
+    litellm_params:
+      model: azure/gpt-5.4
+      api_key: os.environ/AZURE_API_KEY
+      api_base: os.environ/AZURE_API_BASE
+      api_version: 2025-04-01-preview
+    model_info:
+      input_cost_per_token: 0.0000025
+      output_cost_per_token: 0.00001
+      cache_creation_input_token_cost: 0.0000025
+      cache_read_input_token_cost: 0.00000025
+  - model_name: gpt-realtime-2.1-mini
+    litellm_params:
+      model: azure/gpt-realtime-2.1-mini
+      api_key: os.environ/AZURE_API_KEY
+      api_base: os.environ/AZURE_API_BASE
+      api_version: 2025-04-01-preview
+      mode: realtime
+      input_cost_per_token: 0.0000006
+      output_cost_per_token: 0.0000024
+      cache_read_input_token_cost: 0.00000006
+      input_cost_per_audio_token: 0.00001
+      output_cost_per_audio_token: 0.00002
+      cache_read_input_audio_token_cost: 0.0000003
+  - model_name: gpt-5.3-codex
+    litellm_params:
+      model: azure/gpt-5.3-codex
+      api_key: os.environ/AZURE_API_KEY
+      api_base: os.environ/AZURE_API_BASE
+      api_version: 2025-04-01-preview
+    model_info:
+      input_cost_per_token: 0.00000175
+      output_cost_per_token: 0.000007
+      cache_read_input_token_cost: 0.00000018
+  - model_name: gpt-image-1.5
+    litellm_params:
+      model: azure/gpt-image-1.5
+      api_key: os.environ/AZURE_API_KEY
+      api_base: os.environ/AZURE_API_BASE
+      api_version: 2024-02-01
+    model_info:
+      mode: image_generation
+      input_cost_per_token: 0.000005
+      cache_read_input_token_cost: 0.00000125
+      input_cost_per_image_token: 0.000008
+      output_cost_per_token: 0.00001
+      output_cost_per_image_token: 0.000032
