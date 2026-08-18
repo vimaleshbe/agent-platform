@@ -57,6 +57,9 @@ flowchart TB
 - Tracking: central point for model usage and cost observability.
 - Skill/model maintenance: single routing config for model naming and deployment mapping.
 - Egress governance: explicit allowlist path to approved provider domains.
+ - Guardrails: optional content filtering, PII masking, and safety checks can be applied at the gateway.
+ - Token & spend monitoring: per-key usage, quotas, and token accounting to help teams control cost.
+ - Broad provider support: works with most LiteLLM-supported providers (Azure, OpenAI, Anthropic, Vertex, and more).
 
 Fun fact: this gateway won't make coffee yet. Contributions welcome. ☕️
 
