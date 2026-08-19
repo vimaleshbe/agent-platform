@@ -46,6 +46,11 @@ services:
       AZURE_API_KEY: ${AZURE_API_KEY}
       AZURE_API_BASE: ${AZURE_API_BASE}
       DATABASE_URL: postgresql://litellm:litellm@postgres:5432/litellm
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      REDIS_PASSWORD: literedis
+      REDIS_NAMESPACE: agent-platform.llm
+      REDIS_TTL: "600"
       STORE_MODEL_IN_DB: "True"
       HTTP_PROXY: http://egress:3128
       HTTPS_PROXY: http://egress:3128
