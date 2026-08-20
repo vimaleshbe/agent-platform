@@ -22,6 +22,21 @@ model_list:
       output_cost_per_token: 0.000015      # Azure: $15.00 per 1M
       cache_creation_input_token_cost: 0
       cache_read_input_token_cost: 0.00000025 # Azure cached input: $0.25 per 1M
+  - model_name: gpt-realtime-2.1-mini
+    litellm_params:
+      model: azure/gpt-realtime-2.1-mini
+      api_key: os.environ/AZURE_API_KEY
+      api_base: os.environ/AZURE_API_BASE
+      api_version: 2025-04-01-preview
+      mode: realtime
+    model_info:
+      mode: realtime
+      input_cost_per_token: 0.00000060      # Azure text input: $0.60 per 1M
+      output_cost_per_token: 0.0000024     # Azure text output: $2.40 per 1M
+      cache_read_input_token_cost: 0.000000060
+      input_cost_per_audio_token: 0.00001  # Azure audio input: $10.00 per 1M
+      output_cost_per_audio_token: 0.00002 # Azure audio output: $20.00 per 1M
+      cache_read_input_audio_token_cost: 0.0000003
   - model_name: gpt-5.3-codex
     litellm_params:
       model: azure/gpt-5.3-codex
